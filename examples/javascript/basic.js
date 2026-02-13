@@ -13,14 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/countryflags';
  */
 async function callCountryFlagsAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            country: &#x27;ZW&#x27;,
-            format: &#x27;png&#x27;,
-            shape: &#x27;circle&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
