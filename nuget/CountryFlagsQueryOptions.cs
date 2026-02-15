@@ -12,21 +12,18 @@ namespace APIVerve.API.CountryFlags
     {
         /// <summary>
         /// The 2 letter ISO Country Code (e.g. ZW)
-        /// Example: ZW
         /// </summary>
         [JsonProperty("country")]
         public string Country { get; set; }
 
         /// <summary>
-        /// The format of the flag to get (png or svg)
-        /// Example: png
+        /// The format of the flag image
         /// </summary>
         [JsonProperty("format")]
         public string Format { get; set; }
 
         /// <summary>
-        /// The shape of the flag to get (circle or square)
-        /// Example: circle
+        /// The shape of the flag image
         /// </summary>
         [JsonProperty("shape")]
         public string Shape { get; set; }
