@@ -44,7 +44,11 @@ from apiverve_countryflags.apiClient import CountryflagsAPIClient
 # Initialize the client with your APIVerve API key
 api = CountryflagsAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 ```
 
 ###### Simple Request
@@ -124,7 +132,11 @@ from apiverve_countryflags.apiClient import CountryflagsAPIClient, CountryflagsA
 
 api = CountryflagsAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 
 try:
     result = api.execute(query)
@@ -145,7 +157,11 @@ from apiverve_countryflags.apiClient import CountryflagsAPIClient, CountryflagsA
 
 api = CountryflagsAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 
 try:
     result = api.execute(query)
@@ -179,7 +195,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_countryflags.apiClient import CountryflagsAPIClient, CountryflagsAPIClientError
 
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 
 # Using context manager ensures proper cleanup
 with CountryflagsAPIClient("[YOUR_API_KEY]") as api:
@@ -205,7 +225,11 @@ from apiverve_countryflags.apiClient import CountryflagsAPIClient
 # Enable debug mode
 api = CountryflagsAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "country": "ZW", "format": "png", "shape": "circle" }
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -220,8 +244,13 @@ from apiverve_countryflags.apiClient import CountryflagsAPIClient
 
 api = CountryflagsAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "country": "ZW",
+    "format": "png",
+    "shape": "circle"
+}
+
 try:
-    query = { "country": "ZW", "format": "png", "shape": "circle" }
     result = api.execute(query)
     print(result)
 finally:
