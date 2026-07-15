@@ -4,20 +4,32 @@ declare module '@apiverve/countryflags' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface countryflagsResponse {
     status: string;
     error: string | null;
     data: CountryFlagsData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CountryFlagsData {
-      country:     string;
-      countryCode: string;
-      shape:       string;
-      format:      string;
-      downloadURL: string;
+      country:     null | string;
+      countryCode: null | string;
+      shape:       null | string;
+      format:      null | string;
+      downloadURL: null | string;
   }
 
   export default class countryflagsWrapper {
